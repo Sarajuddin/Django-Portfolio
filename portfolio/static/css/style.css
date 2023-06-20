@@ -1,0 +1,164 @@
+*{
+    transition: all 0.6s;
+    box-sizing: border-box;
+}
+.red{
+    color: rgb(219, 17, 17);
+}
+.blue{
+    color: blue;
+}
+
+/* Navbar Starts*/
+.navbar-brand{
+    font-weight: bold;
+    font-size: 28px;
+}
+.nav-link{
+    font-weight: bold;
+}
+.home,
+.nav-link:hover{
+    border-bottom: 3px solid red;
+    color: red !important;
+}
+/* Navbar Ends */
+
+/* First Section Starts */
+.first{
+    background-color: gainsboro;
+    padding: 100px 0px;
+}
+@media screen and (max-width:767px){
+    .first{
+        padding-top: 50px;
+    }
+}
+.myImg img{
+    border-radius: 50%;
+}
+.myImg:hover img{
+    box-shadow: 5px 5px 10px red, -5px -5px 10px black;
+}
+.name{
+    font-weight: bold;
+    font-size: 45px;
+}
+.typing-text{
+    color: rgb(219, 17, 17);
+    font-weight: bold;
+}
+.intro{
+    font-size: 22px;
+    font-weight: bold;
+}
+.badge{
+    background-color: rgb(9, 9, 173);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+.badge:hover i{
+    transition: 0.6s;
+    translate: 5px;
+}
+.social-links{
+    word-spacing: 3px;
+}
+.social-links a i{
+    border-radius: 50%;
+    padding: 8px;
+    background-color: black;
+    color:aquamarine;
+}
+.social-links a i:hover{
+    color: rgb(2, 105, 71);
+}
+/* First Section Ends */
+
+/* About Section Starts */
+.myIntro{
+    text-align: justify;
+}
+.intro-img img{
+    border-radius: 50%;
+}
+.intro-img img:hover{
+    box-shadow: 5px 5px 10px red, -5px -5px 10px black;
+}
+@media screen and (max-width:767px){
+    .intro-img{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+/* About Section Ends */
+
+/* Education Section Starts */
+.education{
+    background-color: gainsboro;
+    padding: 50px 0px;
+}
+.college:hover{
+    border: none;
+    box-shadow: 5px 5px 15px rgb(87, 83, 83);
+}
+.college-img{
+    background-color: gainsboro;
+}
+.college-img img{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+/* Education Section Ends */
+
+/* Skills Section Starts */
+.label{
+    padding: 2px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-right: 2px solid white;
+    background-color: #555;
+    color: white;
+}
+.progress-bar{
+    font-size: 16px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.skills-text{
+    text-align: justify;
+}
+.skills-text h4{
+    text-align: center;
+    font-weight: 700;
+}
+.html:hover{
+    width: 87% !important;
+}
+.css:hover{
+    width: 72% !important;
+}
+.javascript:hover{
+    width: 67% !important;
+}
+.python:hover{
+    width: 82% !important;
+}
+.django:hover{
+    width: 62% !important;
+}
+.aws:hover{
+    width: 72% !important;
+}
+/* Skills Section Ends */
+
+/* Project Section Starts */
+.projects{
+    background-color: gainsboro;
+}
+.card:hover{
+    box-shadow: 5px 5px 10px 5px gray, -5px -5px 10px 5px gray;
+}
+/* Project Section Ends */
