@@ -32,15 +32,14 @@ def index(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         message = request.POST.get('message').capitalize()
-
-        if not name.isalnum():
-            messages.info(request, "Name field can contain alphabet characters only")
-            return redirect('/#contact')
         
-        if len(phone) == 10 and (phone.startswith('6') or phone.startswith('7') or phone.startswith('8') or phone.startswith('9')):
+        if len(phone) != 10:
+            messages.info(request, "Phone number should be 10 Character long.")
+            return redirect('/#contact')
+        if phone.startswith('6') or phone.startswith('7') or phone.startswith('8') or phone.startswith('9'):
             pass
         else:
-            messages.info(request, "Please check your mobile number")
+            messages.info(request, "Phone number should start with (6,7,8,9)")
             return redirect('/#contact')
         
         member = Connection(name=name, email=email, phone=phone, message=message, hostname=host_name, ip=host_ip, browser=browser, os=os, description=description, time=time)
@@ -51,19 +50,19 @@ def index(request):
         email_from = settings.EMAIL_HOST_USER
         recipient_list = ['saraju.work@gmail.com', 'kirtirajput63969@gmail.com']
         send_mail( subject, message, email_from, recipient_list )
-        print('Mail is Sent.')
+        # print('Mail is Sent.')
 
         messages.success(request, "Message is Sent")
         return redirect('/#contact')
     
-    # subject = f'Someone viewed your Portfolio'
-    # message = f'We have detected that someone viewed your portfolio. Some information of the user are given below - \n\nDevice Name : {host_name}\nIP Address : {host_ip}\nBrowser : {browser}\nOperation System : {os}\nDevice Type : {description}\nTime : {time}'
-    # email_from = settings.EMAIL_HOST_USER
-    # recipient_list = ['saraju.work@gmail.com']
-    # send_mail( subject, message, email_from, recipient_list )
-    # # print('Mail is sent......')
+    subject = f'Someone viewed your Portfolio'
+    message = f'We have detected that someone viewed your portfolio. Some information of the user are given below - \n\nDevice Name : {host_name}\nIP Address : {host_ip}\nBrowser : {browser}\nOperation System : {os}\nDevice Type : {description}\nTime : {time}'
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = ['saraju.work@gmail.com', 'kirtirajput63969@gmail.com']
+    send_mail( subject, message, email_from, recipient_list )
+    # print('Mail is sent......')
     
-    # member = viewed(hostname=host_name, ip=host_ip, browser=browser, os=os, description=description, time=time)
-    # member.save()
+    member = viewed(hostname=host_name, ip=host_ip, browser=browser, os=os, description=description, time=time)
+    member.save()
     
     return render(request, 'index.html')
