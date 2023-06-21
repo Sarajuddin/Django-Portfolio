@@ -1,0 +1,14 @@
+asgiref==3.6.0
+Django==4.0.5
+django-crispy-forms==2.0
+django-user-agents==0.4.0
+Jinja2==3.1.2
+jsonify==0.5
+mysql-connector-python==8.0.31
+mysqlclient==2.1.1
+oauthlib==3.2.2
+packaging==23.0
+Pillow==9.3.0
+psycopg2==2.9.5
+PyYAML==6.0
+virtualenv==20.16.6
