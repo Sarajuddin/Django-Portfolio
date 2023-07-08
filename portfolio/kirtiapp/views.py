@@ -48,7 +48,7 @@ def index(request):
         subject = f'{name} wants to connect with you through your Portfolio'
         message = f'Name : {name}\nEmail : {email}\nPhone : {phone}\n\n {message}\n\nWe have get some credential information of the user. Please look at them - \n\n Device Name : {host_name}\nIP Address : {host_ip}\nBrowser : {browser}\nOperation System : {os}\nDevice Type : {description}\nTime : {time}'
         email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['saraju.work@gmail.com', 'kirtirajput63969@gmail.com']
+        recipient_list = ['Email-1', 'Email-2']
         send_mail( subject, message, email_from, recipient_list )
         # print('Mail is Sent.')
 
@@ -58,7 +58,7 @@ def index(request):
     subject = f'Someone viewed your Portfolio'
     message = f'We have detected that someone viewed your portfolio. Some information of the user are given below - \n\nDevice Name : {host_name}\nIP Address : {host_ip}\nBrowser : {browser}\nOperation System : {os}\nDevice Type : {description}\nTime : {time}'
     email_from = settings.EMAIL_HOST_USER
-    recipient_list = ['saraju.work@gmail.com', 'kirtirajput63969@gmail.com']
+    recipient_list = ['Email-1', 'Email-2']
     send_mail( subject, message, email_from, recipient_list )
     # print('Mail is sent......')
     
