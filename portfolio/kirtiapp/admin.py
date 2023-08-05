@@ -1,6 +1,6 @@
 from django.contrib import admin
-from kirtiapp.models import Connection, viewed
+from kirtiapp.models import Connection, Viewed
 
 # Register your models here.
 admin.site.register(Connection)
-admin.site.register(viewed)
+admin.site.register(Viewed)

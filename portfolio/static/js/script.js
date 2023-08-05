@@ -8,6 +8,20 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
+function time_IP(){
+    const dateTime = new Date();
+    document.querySelector('input[id="time"]').value = dateTime;
+    // console.log(dateTime);
+
+    fetch("https://api64.ipify.org")
+    .then((res)=> res.text())
+    .then(ip => {
+        document.querySelector('input[id="ip"]').value = ip
+        // console.log(ip)
+    })
+    .catch(err=> console.log(err))
+}
+time_IP()
 
 // Useful info...
 

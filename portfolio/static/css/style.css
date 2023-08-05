@@ -1,4 +1,6 @@
 *{
+    padding:0px;
+    margin:0px;
     transition: all 0.6s;
     box-sizing: border-box;
 }
@@ -34,12 +36,41 @@
         padding-top: 50px;
     }
 }
+
 .myImg img{
     border-radius: 50%;
 }
 .myImg:hover img{
     box-shadow: 5px 5px 10px red, -5px -5px 10px black;
+    transform: rotateY(180deg);
 }
+/* .linux-box{
+    background-color: #3E001F !important;
+    padding: 18px 0 10px 15px;
+    border-radius: 15px;
+    color: white;
+}
+.linux-box:hover{
+    transform: rotate(-3deg);
+}
+.linux-dots{
+    display: flex;
+    gap: 8px;
+}
+.linux-dots div{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.red-dot{
+    background-color: red;
+}
+.yellow-dot{
+    background-color: yellow;
+}
+.green-dot{
+    background-color: green;
+} */
 .name{
     font-weight: bold;
     font-size: 45px;
@@ -55,7 +86,7 @@
 .badge{
     background-color: rgb(9, 9, 173);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     font-size: 15px;
 }
 .badge:hover i{
@@ -63,6 +94,7 @@
     translate: 5px;
 }
 .social-links{
+    display: inline-block;
     word-spacing: 3px;
 }
 .social-links a i{
@@ -85,13 +117,14 @@
 }
 .intro-img img:hover{
     box-shadow: 5px 5px 10px red, -5px -5px 10px black;
+    /* transform: rotateY(180deg); */
 }
 @media screen and (max-width:767px){
     .intro-img{
         display: flex;
         justify-content: center;
     }
-    
+
 }
 /* About Section Ends */
 
@@ -159,6 +192,43 @@
     background-color: gainsboro;
 }
 .card:hover{
-    box-shadow: 5px 5px 10px 5px gray, -5px -5px 10px 5px gray;
+    box-shadow: 0px 5px 10px 5px gray;
+    transform: translateY(-15px);
 }
 /* Project Section Ends */
+
+
+/* Extracurricular */
+.border-primary:hover{
+    box-shadow: 5px 5px 5px blue;
+}
+.border-warning:hover{
+    box-shadow: 5px 5px 5px yellow;
+}
+.border-info:hover{
+    box-shadow: 5px 5px 5px skyblue;
+}
+
+.border-success:hover{
+    box-shadow: 5px 5px 5px green;
+}
+
+.border-danger:hover{
+    box-shadow: 5px 5px 5px red;
+}
+
+.color-red{
+    color:red !important;
+}
+.achivement{
+    width: 75% !important;
+    margin: auto !important;
+    margin-bottom: 15px !important;
+}
+
+@media screen and (max-width:768px) {
+    .achivement{
+        width: 100% !important;
+    }
+}
+/* Extracurricular Ends */
